@@ -9,6 +9,7 @@ public class Main {
         double acctBal = 0;
         boolean done = false;
         String continueYN = "";
+        String continueWD = "";
 
         //asks user for account balance
         System.out.println("Enter your account balance: ");
@@ -22,9 +23,11 @@ public class Main {
                 if (continueYN.equals("N")) {
                     done = true;
                 } else if (continueYN.equals("Y")) {
-                    System.out.println("Enter - and a number you would like to withdrawal, or a + and a number you would like to deposit: ");
+                    System.out.println("Would you like to withdrawal or deposit? Enter [W/D]: ");
                     if (scan.hasNextDouble()) {
                         acctAddMinus = scan.nextDouble();
+                    } else {
+                        System.out.println("Not even close buddy");
                     }
                 } else {
                     System.out.println("Not even a yes or a no!!!!!");
